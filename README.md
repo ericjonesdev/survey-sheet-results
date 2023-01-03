@@ -78,6 +78,10 @@ The website text is created using streamlit's st.markdown function. There are al
 <img src="images/PieChart.png" alt="pie chart">
 The filtered data is then used to create additional visualizations, including a bar chart and a pie chart, using plotly.express. These visualizations are displayed below the widgets. Overall the website is designed to allow users to explore and analyze data from Google Sheets document through interactive and editable visualizations.
 
+<img src="images/GoogleCloudSpreadsheet.png" alt="Google Cloud">
+
+This website actually reference TWO google spreadsheets. One Google cloud spreadsheet, to coded to render the 3D plotter and for future developement and one .xlsx spreadsheet for the body of the website.
+
 ### 2.2 Future development
 
 <hr>

@@ -4,7 +4,7 @@
 
 <hr>
 
-<img src="images/amIresponsive.png">
+<img src="images/amIresponsive.png" alt="responsive website">
 
 <hr>
 
@@ -47,8 +47,8 @@ The web page configuration is set using streamlit and the visualizations are cre
 The data is also filtered based on user input using streamlit widgets, and then the filtered data is used to create additional visualizations using plotly.express. Finally, the resulting web page is served using streamlit. A massive undertaking!
 <hr>
 
-<img src="images/survey.png">
-<img src="images/MidSection_Spreadsheet.png">
+<img src="images/survey.png" alt="logo">
+<img src="images/MidSection_Spreadsheet.png" alt="logo 2">
 
 <hr>
 
@@ -60,17 +60,17 @@ The data is also filtered based on user input using streamlit widgets, and then 
 
 The website consists of a single page with several sections. The first section includes a header and subheader, displayed at the top of the page. The page also includes a 3D scatter plot, which is created using data from a Google Sheets document and displayed using the plotly.express library. 
 
-<img src="images/3dPlotter.png">
+<img src="images/3dPlotter.png" alt="3D plotter">
 This 3D plot element retrieves information from a google cloud spreadsheet, found at the following address: bit.ly/3VItB0A
 
 This document will also be used for future iterations of the project, which will be explained later within this document.
 
 Below the scatter plot, there is a section which includes information about the total number of participants in the data and the most popular rating from the data. 
 
-<img src="images/Data_analysis_results.png">
+<img src="images/Data_analysis_results.png" alt="Data Analysis">
 Within this area is an orange slider, with which the end-user can edit the results of the survey to his/her liking. There is functionality within the code that allows for the dynamic altering of the bar graph data below it.
 
-<img src="images/Votes_to_Ratings.png">
+<img src="images/Votes_to_Ratings.png" alt="bar chart">
 Within this widget, as well as all others within the website, the user is able to download site data in several formats, including image format.
 
 The website text is created using streamlit's st.markdown function. There are also several streamlit widgets on the page, including a slider and a multiselect widget, which allow the user to filter the data displayed on the page. 
@@ -90,7 +90,7 @@ Additional features that are desired to be developed and implemented are as foll
 
 <hr>
 
-## Testing
+## 3 Testing
 
 <hr>
 
@@ -107,6 +107,37 @@ Some of the problems experienced are as follows:
 
 1. Dynos accrual/implementation: The Procfile had to be adjusted to enable the web GUI on the Heroku dashboard to allow the manual manipulation of Dynos. This, along with documentation issues regarding how many dynos to deploy and for which situation(s) made created additional complication.
 2. Once Dynos were implemented there seems to be an application errors related to boot timeouts as well as networking issue. Based on time constraints it was decided to continue to host the site on Render.com, thus showing definitively that a safe and stable deploy was indeed possible.
+3. Google API crashing Render site. During the process of troubleshooting the Heroku website issues, as the same base code was being used to push updates to the same git repo, an old API key was inadvertently pushed to github. This was resolved by deleting the old key and creating an entirely new user/key combination and pushing this to both builds.
 
 <hr>
 
+<img src="images/lighhouse.png" alt="lighthouse">
+
+The lighhouse Google built-in dev tool was used to gauge user experience and page load. Improvements to these gradings will come in a future iteration of the program.
+
+<hr>
+
+## 4 Deployment
+
+<hr>
+
+1. Navigate to the Render or Heroku Dashboard
+2. Implement local copy of CREDS JSON file within the Render and Heroku security dashboards
+3. Ensure all dependencies within the local and remote files are met.
+4. Select the deploy from branch (main branch) from dashboard(s)
+5. Upon succesful completion of build and zero errors returned, view the live site.
+
+<hr>
+
+## 5 Credits
+
+<hr>
+
+### 5.1 Images
+
+Original artwork created by Eric Jones
+
+### 5.2 Tutorials
+
+"Turn Your Excel File Into A Web App With Python (fast & easy) | Streamlit Tutorial" by Coding is Fun
+Link:https://youtu.be/7zeAIEPJaoQ

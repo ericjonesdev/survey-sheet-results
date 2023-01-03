@@ -51,8 +51,12 @@ The data is also filtered based on user input using streamlit widgets, and then 
 <img src="images/MidSection_Spreadsheet.png">
 
 <hr>
+
 ## 2 Features
+
 <hr>
+
+### 2.1 Sections
 
 The website consists of a single page with several sections. The first section includes a header and subheader, displayed at the top of the page. The page also includes a 3D scatter plot, which is created using data from a Google Sheets document and displayed using the plotly.express library. 
 
@@ -72,4 +76,37 @@ Within this widget, as well as all others within the website, the user is able t
 The website text is created using streamlit's st.markdown function. There are also several streamlit widgets on the page, including a slider and a multiselect widget, which allow the user to filter the data displayed on the page. 
 
 <img src="images/PieChart.png" alt="pie chart">
-The filtered data is then used to create additional visualizations, including a bar chart and a pie chart, using plotly.express. These visualizations are displayed below the widgets. Overall the website is designed to allow users to explore and analyze data from Google Sheets document through interactive visualizations.
+The filtered data is then used to create additional visualizations, including a bar chart and a pie chart, using plotly.express. These visualizations are displayed below the widgets. Overall the website is designed to allow users to explore and analyze data from Google Sheets document through interactive and editable visualizations.
+
+### 2.2 Future development
+
+<hr>
+
+Additional features that are desired to be developed and implemented are as follows:
+
+1. An additional window widget or page which embeds the Google Cloud spreadsheet within the website. This sheet will be able to take in user data to manipulate the information within the pre-existing site widgets.
+2. Dynamic Survey Creation module: Used to create, implement and service new surveys within the site, as needed by the end-user.
+3. User Experience: Additional code and applications that make the site more responsive and easier to use. The Streamlit module presently only affords for basic website functionality, but promise within documentation to offer more robust features in the future.
+
+<hr>
+
+## Testing
+
+<hr>
+
+There was extensive testing ran on two separate hosting platforms:
+
+1. Heroku
+2. Render
+
+The working website is currently hosted on the Render.com platform, as some functionality issues are currently preventing a successful page rendering within the Heroku platform.
+
+For future reference, and upon successful deployment to heroku, that versaion of the website can be viewed here: https://surveysavy.herokuapp.com/
+
+Some of the problems experienced are as follows:
+
+1. Dynos accrual/implementation: The Procfile had to be adjusted to enable the web GUI on the Heroku dashboard to allow the manual manipulation of Dynos. This, along with documentation issues regarding how many dynos to deploy and for which situation(s) made created additional complication.
+2. Once Dynos were implemented there seems to be an application errors related to boot timeouts as well as networking issue. Based on time constraints it was decided to continue to host the site on Render.com, thus showing definitively that a safe and stable deploy was indeed possible.
+
+<hr>
+
